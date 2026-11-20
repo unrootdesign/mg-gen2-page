@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Molten Garage Gen 2 — campaign page preview</title>
+<style>
+:root { color-scheme: light; --ink:#1c1b1a; --sub:#6b6762; --bg:#ffffff; --card:#f6f1e7; --accent:#ff5318; --line:#e8e2d6; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.55; }
+.preview-note { background:#1c1b1a; color:#cfcac2; font-size:12.5px; padding:9px 16px; text-align:center; }
+.preview-note b { color:#ffb49a; font-weight:600; }
+.wrap { max-width:680px; margin:0 auto; padding:40px 20px 80px; }
+h1 { font-size:34px; line-height:1.15; letter-spacing:-0.5px; margin-bottom:12px; }
+.lede { color:var(--sub); font-size:16.5px; margin-bottom:24px; }
+h2 { font-size:23px; letter-spacing:-0.3px; margin:52px 0 10px; }
+p { margin-bottom:14px; font-size:16px; }
+.sub { color:var(--sub); }
+video, img { width:100%; display:block; border-radius:14px; background:var(--card); object-fit:cover; margin:14px 0 6px; }
+.cap { font-size:13px; color:var(--sub); margin-bottom:8px; }
+.cta { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px; margin:26px 0 8px; }
+.cta h3 { font-size:17px; margin-bottom:4px; }
+.cta p { font-size:14.5px; color:var(--sub); margin-bottom:14px; }
+.btn { display:block; width:100%; border:0; border-radius:10px; padding:14px; font-size:16px; font-weight:600; cursor:pointer; background:var(--accent); color:#fff; font-family:inherit; }
+.btn:active { transform:translateY(1px); }
+.coming { color:var(--accent); font-weight:700; font-size:26px; letter-spacing:-0.3px; }
+.meta { display:flex; gap:14px; align-items:center; margin:8px 0 2px; font-size:14px; color:var(--sub); }
+ol { margin:0 0 14px 22px; font-size:16px; }
+ol li { margin-bottom:4px; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.grid2 video, .grid2 img { margin:0; }
+.toast { position:fixed; left:50%; bottom:28px; transform:translateX(-50%) translateY(20px); background:#1c1b1a; color:#fff; padding:10px 18px; border-radius:10px; font-size:14px; opacity:0; transition:all .25s; pointer-events:none; }
+.toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+footer { margin-top:64px; padding-top:20px; border-top:1px solid var(--line); font-size:13px; color:var(--sub); }
+</style>
+</head>
+<body>
+<div class="preview-note"><b>Preview.</b> A mockup of the planned Molten Garage Gen 2 campaign page for MakerWorld crowdfunding. Not a live MakerWorld page.</div>
+<div class="wrap">
+
+<h1>Molten Garage Gen 2 — Build Your Own Truck</h1>
+<p class="lede">Modular toy trucks. Pick every part, print at home, snap it together. No supports, no glue, no AMS.</p>
+<video autoplay muted loop playsinline preload="auto" style="aspect-ratio:1/1" src="MG_MW_cover_v9_1080.mp4"></video>
+<div class="cta">
+  <div class="coming">Coming soon</div>
+  <div class="meta"><span>Launching: TBA</span><span>·</span><span>Rewards revealed at launch</span></div>
+  <p>Follow to get the launch date first and early-bird access.</p>
+  <button class="btn" onclick="toast()">🔔 Notify me</button>
+</div>
+
+<h2>Meet Molten Garage</h2>
+<p>One kit, two trucks and everything in between. 8 parts of the truck, 2 options each. Swap one part and it's a different truck.</p>
+<video autoplay muted loop playsinline preload="auto" style="aspect-ratio:3/2" src="MG_MW_swap-one-part_3x2.mp4"></video>
+
+<h2>How it works</h2>
+<ol>
+<li>Configure your truck online</li>
+<li>Download the print files</li>
+<li>Print: parts lie flat, no supports</li>
+<li>Snap it together</li>
+</ol>
+<video autoplay muted loop playsinline preload="auto" style="aspect-ratio:1/1" src="MG_MW_how-it-works_1x1.mp4"></video>
+
+<h2>Start with A or B</h2>
+<p>Pack A: the fastback SUV. Pack B: the pickup. Every part fits both, and everything you build from them in between.</p>
+<img alt="Pack A fastback SUV and pack B pickup" style="aspect-ratio:2/1" src="MG_MW_two-packs_AB.jpg">
+
+<h2>The configurator</h2>
+<p>Choose A or B for chassis, body, bed, hood, front, rear, tires and rims, and watch the truck change live.</p>
+<video autoplay muted loop playsinline preload="auto" style="aspect-ratio:4/3" src="MG_MW_configurator-AB_4x3.mp4"></video>
+
+<h2>What's in the box</h2>
+<p>8 modules, 24 parts, one truck.</p>
+<img alt="All parts of one truck laid flat" style="aspect-ratio:4/3" src="MG_MW_parts-flatlay_4x3.jpg">
+
+<h2>Built to snap</h2>
+<p>Press fit. No glue, no screws, no electronics: print the parts and push them together.</p>
+<video autoplay muted loop playsinline preload="auto" style="aspect-ratio:4/3" src="MG_MW_snap-wheel_4x3.mp4"></video>
+
+<h2>Gen 2: smoother, meaner</h2>
+<p>Rounder shapes, more detail, same modular system.</p>
+<img alt="SUV from four sides" style="aspect-ratio:1/1" src="MG_MW_suv-angles_grid.jpg">
+<div class="grid2">
+<video autoplay muted loop playsinline preload="auto" style="aspect-ratio:3/4" src="MG_MW_suv-pan_3x4.mp4"></video>
+<video autoplay muted loop playsinline preload="auto" style="aspect-ratio:3/4" src="MG_MW_pickup-pan_3x4.mp4"></video>
+</div>
+
+<h2>Made to play</h2>
+<p>It's a toy. Built to be driven, dropped, taken apart and rebuilt.</p>
+<video autoplay muted loop playsinline preload="auto" style="aspect-ratio:3/2" src="MG_MW_in-play_3x2.mp4"></video>
+
+<h2>What you'll need</h2>
+<p>170 × 80 × 75 mm: prints on any printer, even an A1 mini.</p>
+<img alt="Truck dimensions 170 by 80 by 75 mm" style="aspect-ratio:4/3" src="MG_MW_size_4x3.jpg">
+<p>One truck takes about 208 g of PLA, under 9 hours, 3 plates.</p>
+<img alt="3 print plates" style="aspect-ratio:2/1" src="MG_MW_print-plates.jpg">
+
+<h2>This is just the beginning</h2>
+<p>Options A and B come with the kit. C and D are next if people want them: 65,536 trucks when the set is complete.</p>
+<img alt="Options roadmap: A and B live, C and D coming" style="aspect-ratio:1/1" src="MG_MW_roadmap_1x1.jpg">
+<p class="sub">Gen 1 is where we started: our first free configurator, 5 options per part, 78,125 combinations. Gen 2 rebuilds that system with real detail.</p>
+<video autoplay muted loop playsinline preload="auto" style="aspect-ratio:4/3" src="MG_MW_gen1-configurator_4x3.mp4"></video>
+<div class="cap">gen 1 · where we started</div>
+
+<h2>Why crowdfunding?</h2>
+<p>The trucks are real: designed, printed and played with. Your backing decides how fast the system grows and which options come next.</p>
+
+<h2>About Molten Garage</h2>
+<p>Molten Garage is one designer making trucks you print instead of buy. Swap the headlights: new truck. Swap the wheels: another one. Like Lego, only simpler, and the parts come out of your own printer. Good hands-on time for kids, and for anyone who likes building things.</p>
+<img alt="Modeling the trucks" style="aspect-ratio:4/3" src="MG_MW_about-modeling_4x3.jpg">
+<img alt="Desk with printed prototypes" style="aspect-ratio:4/3" src="MG_MW_about-prototypes_4x3.jpg">
+<div class="cap">tested again and again · it works</div>
+
+<h2>Rewards</h2>
+<img alt="Gen 2 SUV front" style="aspect-ratio:4/3" src="MG_MW_suv-front_4x3.jpg">
+<div class="cta">
+  <h3>Rewards revealed at launch</h3>
+  <p>Followers get the launch date first and early-bird access.</p>
+  <button class="btn" onclick="toast()">🔔 Notify me</button>
+</div>
+
+<footer>Page preview built for the MakerWorld crowdfunding application · Molten Garage · 2026</footer>
+</div>
+<div class="toast" id="toast">Preview only: the real button will live on MakerWorld</div>
+<script>
+function toast() {
+  var t = document.getElementById('toast');
+  t.classList.add('show');
+  clearTimeout(window.__tt);
+  window.__tt = setTimeout(function() { t.classList.remove('show'); }, 2600);
+}
+</script>
+</body>
+</html>
