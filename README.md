@@ -1,0 +1,1 @@
+# mg-gen2-page
