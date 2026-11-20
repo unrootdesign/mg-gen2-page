@@ -61,9 +61,6 @@ footer { margin-top:64px; padding-top:20px; border-top:1px solid var(--line); fo
 </ol>
 <video autoplay muted loop playsinline preload="auto" style="aspect-ratio:1/1" src="MG_MW_how-it-works_1x1.mp4"></video>
 
-<h2>The configurator</h2>
-<p>Choose A or B for chassis, body, bed, hood, front, rear, tires and rims, and watch the truck change live.</p>
-<video autoplay muted loop playsinline preload="auto" style="aspect-ratio:4/3" src="MG_MW_configurator-AB_4x3.mp4"></video>
 
 <h2>What you get</h2>
 <p>The print files for one truck: 8 modules, 24 parts. Download, print, build.</p>
@@ -80,34 +77,8 @@ footer { margin-top:64px; padding-top:20px; border-top:1px solid var(--line); fo
 
 <h2>Gen 2: smoother, meaner</h2>
 <p>Rounder shapes, more detail, same modular system.</p>
-<canvas id="gen2rand" width="1029" height="772" style="width:100%;aspect-ratio:1029/772;border-radius:14px;background:var(--card);display:block;margin:14px 0 6px"></canvas>
+<video autoplay muted loop playsinline preload="auto" style="aspect-ratio:1280/1008" src="MG_MW_gen2-360_4x3.mp4"></video>
 <div class="cap">hitting random in the gen 2 configurator</div>
-<script>
-(async function(){
-  var cv = document.getElementById('gen2rand');
-  function fallback(){ var im=document.createElement('img'); im.src='MG_MW_suv-front_4x3.jpg'; im.alt='Gen 2 SUV'; im.style.aspectRatio='4/3'; cv.replaceWith(im); }
-  if (!('ImageDecoder' in window)) { fallback(); return; }
-  try {
-    var buf = await fetch('mg-gen2-random.gif').then(function(r){ return r.arrayBuffer(); });
-    var dec = new ImageDecoder({data:buf, type:'image/gif'});
-    await dec.tracks.ready;
-    var n = dec.tracks.selectedTrack.frameCount;
-    var ctx = cv.getContext('2d');
-    var frames = [];
-    for (var i=0;i<n;i++){
-      var res = await dec.decode({frameIndex:i});
-      var off = document.createElement('canvas'); off.width=1029; off.height=772;
-      off.getContext('2d').drawImage(res.image, 80,40,1029,772, 0,0,1029,772);
-      var bmp = await createImageBitmap(off);
-      frames.push(bmp);
-      res.image.close();
-    }
-    var k=0;
-    ctx.drawImage(frames[0],0,0);
-    setInterval(function(){ k=(k+1)%frames.length; ctx.drawImage(frames[k],0,0); }, 280);
-  } catch(e){ fallback(); }
-})();
-</script>
 
 <h2>Made to play</h2>
 <p>It's a toy. Built to be driven, dropped, taken apart and rebuilt.</p>
